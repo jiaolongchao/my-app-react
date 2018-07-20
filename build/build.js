@@ -43,18 +43,22 @@ shell.cp('-R', 'assets/*', assetsPath);
 shell.config.silent = false; */
 
 webpack(webpackConfig, function (err, stats) {
+    console.log('a')
     let jsarr = findSync(path.join(assetsPath, '/js'), 'js')
     let cssarr = findSync(path.join(assetsPath, '/css'), 'css')
     let arr = jsarr.concat(cssarr)
+    console.log(arr)
     let filename = resolve("template/preload.ejs")
     let str = require('fs').readFileSync(filename, 'utf8');
     let ret = ejs.render(str, {
         items: arr,
         filename
     });
+    console.log('b')
     fs.writeFileSync(path.join(config.build.assetsRoot, 'preload.html'), ret)
 
     animation.stop();
+    
     if (err) throw err;
     process.stdout.write(stats.toString({
         colors: true,

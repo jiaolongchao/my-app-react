@@ -24,8 +24,8 @@ let webpackConfig = merge(baseWebpackConfig, {
     devtool: config.build.productionSourceMap ? '#source-map' : false,
     output: {
         path: config.build.assetsRoot,
-       // filename: utils.assetsPath('js/[name].[chunkhash].js'),
-       // chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+        filename: utils.assetsPath('js/[name].[chunkhash].js'),
+        chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -39,10 +39,10 @@ let webpackConfig = merge(baseWebpackConfig, {
             comments: false,
             sourceMap: true
         }),
-        new ExtractTextPlugin({
+         new ExtractTextPlugin({
             filename: utils.assetsPath('css/[name].[contenthash].css'),
             allChunks: true
-        }),
+        }), 
 
         new HtmlWebpackPlugin({
             title: 'my-app-react',
