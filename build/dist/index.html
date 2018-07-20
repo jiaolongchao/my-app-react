@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://content.0606.com.cn/web/js/polyfill.min.js"></script>
+    <script>!function(e,t){function i(){var t=r.getBoundingClientRect().width;t/d>320&&(t=320*d);var i=100*t/640;t||(i=50),window.baseFontSize_haina=c?i:2*i,r.style.fontSize=i+"px",s.rem=e.rem=i}window["haina-version"]="v2.4.8",window.webviewHistory={};var a,n=e.document,r=n.documentElement,o=n.querySelector('meta[name="viewport"]'),l=n.querySelector('meta[name="flexible"]'),d=0,m=0,s=t.flexible||(t.flexible={}),c=(e.navigator.appVersion.match(/android/gi),e.navigator.appVersion.match(/iphone/gi));if(o){console.warn("将根据已有的meta标签来设置缩放比例");var p=o.getAttribute("content").match(/initial\-scale=([\d\.]+)/);p&&(m=parseFloat(p[1]),d=parseInt(1/m))}else if(l){var u=l.getAttribute("content");if(u){var f=u.match(/initial\-dpr=([\d\.]+)/),w=u.match(/maximum\-dpr=([\d\.]+)/);f&&(d=parseFloat(f[1]),m=parseFloat((1/d).toFixed(2))),w&&(d=parseFloat(w[1]),m=parseFloat((1/d).toFixed(2)))}}if(!d&&!m){var v=e.devicePixelRatio;m=1/(d=c&&!window.navigator.userAgent.match(/OS 9_3/)?v>=3&&(!d||d>=3)?2:v>=2&&(!d||d>=2)?2:1:1)}if(r.setAttribute("data-dpr",d),!o)if((o=n.createElement("meta")).setAttribute("name","viewport"),o.setAttribute("content","initial-scale="+m+", maximum-scale="+m+", minimum-scale="+m+", user-scalable=no"),r.firstElementChild)r.firstElementChild.appendChild(o);else{var h=n.createElement("div");h.appendChild(o),n.write(h.innerHTML)}e.addEventListener("resize",function(){clearTimeout(a),a=setTimeout(i,300)},!1),e.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(a),a=setTimeout(i,300),c&&window.location.reload())},!1),"complete"===n.readyState?n.body.style.fontSize=12*d+"px":n.addEventListener("DOMContentLoaded",function(e){n.body.style.fontSize=12*d+"px"},!1),i(),s.dpr=e.dpr=d,s.refreshRem=i,s.rem2px=function(e){var t=parseFloat(e)*this.rem;return"string"==typeof e&&e.match(/rem$/)&&(t+="px"),t},s.px2rem=function(e){var t=parseFloat(e)/this.rem;return"string"==typeof e&&e.match(/px$/)&&(t+="rem"),t}}(window,window.lib||(window.lib={}))</script>
+    <script src="https://content.0606.com.cn/web/js/vconsole.min.js"></script>    
+    <script>function GetUrlString(n){var e=new RegExp("(^|&)"+n+"=([^&]*)(&|$)"),o=window.location.search.substr(1).match(e);return null!=o?unescape(o[2]):null}if(GetUrlString("showVcon"))var vConsole=new VConsole</script>
+    <style>
+        [data-dpr="1"] .haina-bussiness-loading{
+            font-size: 12px;
+        }
+        [data-dpr="2"] .haina-bussiness-loading{
+            font-size: 24px;
+        }
+        [data-dpr="1"] .haina-bussiness-loading .loading-icon{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        [data-dpr="2"] .haina-bussiness-loading .loading-icon{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .haina-bussiness-loading {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        .haina-bussiness-loading .loading-icon {
+            
+            display: inline-block;
+            background: url('/assets/images/myloading.gif');
+            background-size: 100%;
+            
+        }
+
+        .haina-bussiness-loading p {
+            text-align: center;
+        }
+    </style>
+<link href="E:\work\my-app-react\build\dist\assets/css/main.52b2e6d44c3299f76d6c48267649627a.css" rel="stylesheet"></head>
+<body>
+    <div id="example">
+        <div class="haina-bussiness-loading">
+            <div>
+                <i class="loading-icon"></i>
+                <p>加载中...</p>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="https://content.0606.com.cn/m/manifest.js"></script><script type="text/javascript" src="https://content.0606.com.cn/m/vendor.js"></script><script type="text/javascript" src="https://content.0606.com.cn/m/main.js"></script></body>
+
+</html>

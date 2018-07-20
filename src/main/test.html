@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <!--<script src="http://192.168.4.165:8080/target/target-script-min.js#anonymous"></script>-->
-    <title>...</title>
-    <script src="https://content.0606.com.cn/web/js/polyfill.min.js"></script>
+    <title></title>
     <script src="https://content.0606.com.cn/web/js/vconsole.min.js"></script>
     <script>
        var vConsole = new VConsole();
@@ -186,27 +183,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://content.0606.com.cn/mtest/assets/js/hntrack_1.0.4.js" crossorigin="anonymous"></script>
-    <script>
-        (function () {
-            window['HNtrack'] = new HNtrack()
-            var ua = window.navigator.userAgent.toLowerCase()
-            if (ua.indexOf('micromessenger') > -1) {
-                var wscript = document.createElement("script")
-                wscript.type = 'text/javascript'
-                wscript.src = "https://res.wx.qq.com/open/js/jweixin-1.2.0.js"
-                wscript.async = true
-                document.body.appendChild(wscript)
-            } else if (ua.match(/QQ/ig)) {
-                var qscript = document.createElement("script")
-                qscript.type = 'text/javascript'
-                qscript.src = "https://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"
-                qscript.async = true
-                document.body.appendChild(qscript)
-            }
-        })()
-    </script>
 </body>
 
 </html>

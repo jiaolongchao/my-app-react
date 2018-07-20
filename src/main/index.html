@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>...</title>
-    <script src="https://content.0606.com.cn/web/js/polyfill.min.js"></script>
+    <title></title>   
     <script>
         ; (function (win, lib) {
             window["haina-version"] = 'v2.4.8'
@@ -184,7 +183,6 @@
         }
     </style>
 </head>
-
 <body>
     <div id="example">
         <div class="haina-bussiness-loading">
@@ -194,27 +192,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://content.0606.com.cn/m/assets/js/hntrack_1.0.4.js" crossorigin="anonymous"></script>
-    <script>
-        (function () {
-            window['HNtrack'] = new HNtrack()
-            var ua = window.navigator.userAgent.toLowerCase()
-            if (ua.indexOf('micromessenger') > -1) {
-                var wscript = document.createElement("script")
-                wscript.type = 'text/javascript'
-                wscript.src = "https://res.wx.qq.com/open/js/jweixin-1.2.0.js"
-                wscript.async = true
-                document.body.appendChild(wscript)
-            } else if (ua.match(/QQ/ig)) {
-                var qscript = document.createElement("script")
-                qscript.type = 'text/javascript'
-                qscript.src = "https://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"
-                qscript.async = true
-                document.body.appendChild(qscript)
-            }
-        })()
-    </script>
 </body>
 
 </html>
