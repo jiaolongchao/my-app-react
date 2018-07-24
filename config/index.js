@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path');
-const globalEnv = 'test2';
+const globalEnv = 'test';
 const isHttps = true;
 module.exports = {
   build: {

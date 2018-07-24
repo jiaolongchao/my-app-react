@@ -1,0 +1,370 @@
+.faxianWrap{
+    .headerSwiper{
+        width:100%;
+        height: 360px;
+        .swiper-slide{
+            img{
+                width:100%;
+                height:360px;
+            }
+        }
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                opacity: 0.6;
+                background: #FFFFFF;
+                border-radius: 100px;
+                width: 14px;
+                height: 4px; 
+            }
+            .swiper-pagination-bullet-active{
+                width: 14px;
+                height: 8px; 
+                opacity: 1;
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+    .navigateList{
+        background: #fff;
+        padding: 32px 30px;
+        border-bottom:solid 20px #F2F3F6;
+        font-family: PingFangSC-Regular;       
+        .fourModules{
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding-bottom:40px;
+            border-bottom:solid 1px #E5E5E5;/*no*/
+            .navigate-item-button{
+                em:first-child{
+                    display: block;
+                    width: 124px;                    
+                    height: 124px;
+                    margin-bottom: 4px;
+                    img{
+                        width: 124px;                    
+                        height: 124px;
+                    }
+                }
+                em:last-child{
+                    font-size: 28px;/*px*/
+                    color: #4D4D4D;
+                    letter-spacing: 0;
+                    text-align: center;
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .headline{
+            padding-top: 32px;
+            overflow: hidden;
+            .pic_breaknews{
+                width: 106px;
+                height: 38px;
+                border-right:solid 1px #E5E5E5;/*no*/
+                float: left;
+                padding-right:20px;
+                img{
+                    width: 86px;
+                    height: 38px;
+                }
+            }
+            .headlineList{
+                font-family: PingFangSC-Regular;
+                font-size: 26px;/*px*/
+                color: #7A7A7A;
+                letter-spacing: 0;
+                padding-left: 28px;
+                height: 38px;
+                .swiper-slide{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                }
+            }
+        }
+    }
+    .columnTitle{
+        height: 50px;
+        overflow: hidden;
+        .mainTit{
+            font-family: PingFangSC-Medium;
+            font-size: 36px;/*px*/
+            color: #3D3D3D;
+            letter-spacing: 0;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        .subTit{
+            display: inline-block;
+            vertical-align: middle;
+            font-family: PingFangSC-Regular;
+            font-size: 26px;/*px*/
+            color: #999999;
+            padding-left:12px;
+            border-left:solid 1px  #D9D9D9;/*no*/
+
+        }
+        .moreLink{
+            display: block;
+            float: right;
+            font-family: PingFangSC-Regular;
+            font-size: 28px;/*px*/
+            color: #999999;
+            letter-spacing: 0;
+            text-align: center;
+            width: 90px;
+            height: 40px;
+            line-height: 40px;
+            position: relative;  
+            text-align: left;          
+            &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 32px;
+                height: 32px;
+                right: 0;
+                top: 50%;
+                margin-top:-16px;
+                background: url('../assets/images/faxian/icon_more@2x.png') no-repeat;
+                background-size:cover;
+            }
+        }
+    }
+    .webLive{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        padding: 40px 30px 23px 30px;
+        .picLive{
+            width: 100%;
+            height: 160px;
+            margin: 30px 0 12px 0;
+            img{
+                width: 100%;
+                height: 160px;
+            }
+        }
+        .allTeam{
+            height: 720px;
+            margin-bottom:23px;         
+            .swiper-slide{
+                height: 240px;               
+            }
+        }
+        .changeTeam{
+            font-family: PingFangSC-Regular;
+            font-size: 32px;/*px*/
+            color: #3C3C3C;
+            letter-spacing: 0;
+            text-align: center; 
+            span{
+                display: inline-block;
+                margin-right: 12px;
+                vertical-align: middle;
+            }
+            i{
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                width: 42px;
+                height: 42px;
+                background: url('../assets/images/faxian/icon-change@2x.png') no-repeat;
+                background-size: cover;
+                transition-duration: .5s;
+                transition-timing-function: ease-in-out;
+                transition-property: transform;
+            }
+        }
+    }
+    .quantify{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        padding: 40px 30px 30px 30px;
+        .quantifyList{
+            padding-top:30px;
+        }
+    }
+    .goldstock{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        padding: 40px 30px 38px 30px;
+        .goldstockList{
+            padding-top:30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;  
+            flex-wrap:nowrap;          
+        }
+        .goldstockList > div{
+            flex:50%;
+        }
+        .goldstockList > div:first-child{
+            margin-right:20px;
+        }
+    }
+    .diagnose{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        padding: 40px 30px 0 30px;
+        .marketAnalysisItem{
+            position: relative;           
+            height: 198px;
+            .dashboard{
+                top: 35px;
+            }
+            .dashboard-text{                
+                bottom:0;
+                padding-right:0;
+                left: 328px;
+            }
+        }
+        .emotionNews{
+            padding-top: 8px;
+            font-family: PingFangSC-Regular;  
+            letter-spacing: 0;            
+            .emotionNewsList{
+                display: block;
+                border-bottom: 1px solid #E5E5E5;/*no*/
+                height: 100px;
+                line-height: 100px;
+                padding: 30px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:last-child{
+                    border-bottom:0;
+                }
+                span{
+                    font-size: 28px;/*px*/
+                    color: #3C3C3C;
+                    display: block;
+                    width: 610px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                em{
+                    font-size: 24px;/*px*/
+                    color: #7A7A7A;
+                }
+            }
+        }
+    }
+    .hotViewpoint{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        padding: 40px 30px 0 30px;
+    }
+    .quantHeader{
+        background: #fff;
+        height: 202px;
+        border-bottom:solid 20px #F2F3F6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        .quantBox{
+            width: 214px;
+            height: 142px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03), 0 0 20px 0 rgba(0, 0, 0, 0.05);
+            img{
+                width:100%;
+            }
+        }
+      }
+      .quantAdvertising{
+        background: #fff;
+        border-bottom:solid 20px #F2F3F6;
+        width: 100%;
+        height: 160px;
+      }
+}
+.goldStockItem{
+    height: 234px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.03), 0 0 20px 0 rgba(0,0,0,0.05);
+    border-radius: 4px;
+    padding: 34px 26px 29px 28px;
+    position: relative;
+    .stockName{
+        font-family: PingFangSC-Medium;
+        font-size: 32px;/*px*/
+        color: #3D3D3D;
+        letter-spacing: 0;
+        height: 45px;
+        line-height: 45px;
+    }  
+    .subName{
+        font-family: PingFangSC-Regular;
+        font-size: 24px;/*px*/
+        color: #7A7A7A;
+        margin-top: 2px;
+        margin-bottom:16px;
+        height: 33px;
+        line-height: 33px;
+    }
+    .free{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 34px;
+        text-align: center;
+        font-family: PingFangSC-Semibold;
+        font-size: 22px;/*px*/
+        color: #FFFFFF;
+        text-align: left;
+        width: 126px;
+        text-align: center;
+        height: 42px;
+        line-height: 42px;
+        background-image: linear-gradient(90deg, #FF9320 0%, #FF511D 100%);
+        box-shadow: 0 0 12px 0 rgba(255,90,28,0.30);
+        border-radius: 100px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0
+    }
+    .ratioList{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        .fiveProfit{
+            font-family: PingFangSC-Medium;
+            font-size: 30px;/*px*/
+            color: #F4303B;
+            letter-spacing: 0;
+            display: block;
+            text-align: left;
+        }
+        .successRatio{
+            font-family: PingFangSC-Medium;
+            font-size: 30px;/*px*/
+            color: #3C3C3C;
+            letter-spacing: 0;
+            height: 42px;
+            line-height: 42px;
+            display: block;
+            text-align: left;
+        }
+        em{
+            font-family: PingFangSC-Regular;
+            font-size: 24px;/*px*/
+            text-align: left;
+            color: #7A7A7A;
+            letter-spacing: 0;
+            height: 33px;
+            line-height: 33px;
+            display: block;
+        }
+        .red{
+            color: #F4303B; 
+        }
+        .green{
+            color:#07B351
+        }
+    }
+}

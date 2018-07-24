@@ -9,15 +9,14 @@ export default class Home extends React.Component<any, any> {
     }
 
     componentDidMount() {       
-        //document.title = '海纳智投'
+        document.title = '海纳智投'
     }
     public render() {
         let { className, ...others } = this.props;
         let { match, route,history } = this.props;
         console.log(this.props)
         return (
-            <div className={className}>
-                <div className='jlc'>hello world1111111</div>
+            <div className={className}>                
                 {renderRoutes(route.childRoutes)}
             </div >
         )
