@@ -53,16 +53,16 @@ export default class Shouye extends React.Component<any, any> {
                 <div className="headerSwiper swiper-container" ref="headerSwiper">
                     <div className="swiper-wrapper" >
                         <div className="swiper-slide">
-                            <a href="#"><img src={require('../assets/images/faxian/banner@2x.png')} alt=""/></a>
+                            <a href="#"><img src={require('../../assets/images/faxian/banner@2x.png')} alt=""/></a>
                         </div>
                         <div className="swiper-slide">
-                            <a href="#"><img src={require('../assets/images/faxian/banner2@2x.jpg')} alt=""/></a>
+                            <a href="#"><img src={require('../../assets/images/faxian/banner2@2x.jpg')} alt=""/></a>
                         </div>
                         <div className="swiper-slide">
-                            <a href="#"><img src={require('../assets/images/faxian/banner@2x.png')} alt=""/></a>
+                            <a href="#"><img src={require('../../assets/images/faxian/banner@2x.png')} alt=""/></a>
                         </div>
                         <div className="swiper-slide">
-                            <a href="#"><img src={require('../assets/images/faxian/banner2@2x.jpg')} alt=""/></a>
+                            <a href="#"><img src={require('../../assets/images/faxian/banner2@2x.jpg')} alt=""/></a>
                         </div>
                     </div>
                     <div className="swiper-pagination"></div>

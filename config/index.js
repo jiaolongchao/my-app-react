@@ -23,7 +23,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../../haina-mobile-release'),
     assetsSubDirectory: 'assets',
     // assetsPublicPath: '/',
-    assetsPublicPath: 'https://content.0606.com.cn/mtest/', 
+    assetsPublicPath: 'https://content.0606.com.cn/mtest/',
     productionSourceMap: true,
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
@@ -144,29 +144,36 @@ module.exports = {
         }
       },
       '/h5api': {
-          target: `https://h5api-test.0606.com.cn`,
-          changeOrigin: true,
-          pathRewrite: {
-            '^/h5api': ''
-            }
-        },
-        '/currency': {
-            target: `http${isHttps ? 's' : ''}://currency-${globalEnv}.0606.com.cn`,
-            changeOrigin: true,
-            pathRewrite: {
-                '^/currency': ''
-            }
-        },
-        '/buss': {
-            target: `http${isHttps ? 's' : ''}://buss-test.0606.com.cn`,
-            changeOrigin: true,
-            pathRewrite: {
-                '^/buss': ''
-            }
+        target: `https://h5api-test.0606.com.cn`,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/h5api': ''
         }
-      }
-    },
-    cssSourceMap: false
-  }
+      },
+      '/currency': {
+        target: `http${isHttps ? 's' : ''}://currency-${globalEnv}.0606.com.cn`,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/currency': ''
+        }
+      },
+      '/buss': {
+        target: `http${isHttps ? 's' : ''}://buss-test.0606.com.cn`,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/buss': ''
+        }
+      },
+      "/xiaojiugui": {
+        target: `http://dev.xiao9gui.com`,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/xiaojiugui': ''
+        }
+      },
+    }
+  },
+  cssSourceMap: false
+}
 
 

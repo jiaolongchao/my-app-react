@@ -11,8 +11,7 @@ export default class DomainNameConst {
         development: '/advisor/api'
     }
     static mapi = {
-        production: 'https://mapi2.0606.com.cn/api',
-        // production:'/mapi/api',
+        production: 'https://mapi2.0606.com.cn/api',       
         test:'https://mapi-test.0606.com.cn/api',
         test2:'https://mapi-test2.0606.com.cn/api',
         dev1:'http://mapi-dev1.0606.com.cn/api',
@@ -134,6 +133,14 @@ export default class DomainNameConst {
         sh:"https://content.com.cn",
         development: ''
     }
+
+    static xiao9Gui = {
+        production: 'https://dev.xiao9gui.com',
+        test:'https://dev.xiao9gui.com',
+        dev:'https://dev.xiao9gui.com',
+        development: '/xiaojiugui'        
+    }
+
     static getEnv(){
         if(process&&process.env.NODE_ENV==='development'){
             if(window['wx']&&window['wx'].version){
@@ -141,11 +148,12 @@ export default class DomainNameConst {
                 return 'test'
             }
             return 'development'
-        }else{
+        }else{           
             let env = 'production'
-            if(!(window['wx']&&window['wx'].version)){
+            if(!(window['wx']&&window['wx'].version)){               
                 if(window.location.hostname.split('.').length>0){
                     let hostname = window.location.hostname.split('.')[0]
+                    console.log(hostname.indexOf("-"))
                     if(hostname.indexOf("-")>-1){
                         env = hostname.substring(hostname.indexOf("-")+1)
                         // env = 'testing'
@@ -203,5 +211,9 @@ export default class DomainNameConst {
     }
     static getAgreeUrl():string{
         return DomainNameConst.agreeurl[DomainNameConst.getEnv()]
+    }
+
+    static getXiao9Gui():string{
+        return DomainNameConst.xiao9Gui[DomainNameConst.getEnv()]
     }
 }

@@ -31,10 +31,10 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
 });
 
 // 代理遍历
-Object.keys(proxyTable).forEach(function (context) {
-    let options = proxyTable[context];
+Object.keys(proxyTable).forEach(function (context) {        
+    let options = proxyTable[context];    
     if (typeof options === 'string') {
-        options = { target: options };
+        options = { target: options };        
     }
     app.use(proxyMiddleware(options.filter || context, options));
 });
