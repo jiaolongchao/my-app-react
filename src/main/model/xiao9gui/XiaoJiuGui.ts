@@ -6,6 +6,21 @@ import {action} from "mobx";
 import {plainToClassFromExist} from "class-transformer";
 import XiaoJiuGuiService from '../../service/xiao9gui/XiaoJiuGuiService';
 export default class XiaoJiuGui{
+    @observable    
+    public shopItem : ShopItem[] = [];
+
+    @action saveitemDetail(itemNum:number,shopId:number,shipItemId:number,token:string){
+        return XiaoJiuGuiService.saveitemDetail(itemNum,shopId,shipItemId,token).then(res=>{
+            //plainToClassFromExist(this,res.data)           
+            //return res
+        }).catch(res=>{
+            //plainToClassFromExist(this,res.data) 
+            this.shopItem = res.data; 
+            return res.data;
+        })
+    }
+}
+class ShopItem{
     @observable
     public agentId:number;
     @observable
@@ -50,11 +65,4 @@ export default class XiaoJiuGui{
     public shopItemId:number;
     @observable
     public userId:number;
-
-    @action saveitemDetail(itemNum:number,shopId:number,shipItemId:number){
-        return XiaoJiuGuiService.saveitemDetail(itemNum,shopId,shipItemId).then(res=>{
-            plainToClassFromExist(this,res)
-            return res
-        })
-    }
 }

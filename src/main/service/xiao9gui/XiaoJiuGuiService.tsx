@@ -7,14 +7,22 @@ import Utils from '@com.haina.web/haina-lib/lib/utils/Utils';
 import Constants from '../../enum/Constants';
 
 export default class XiaoJiuGuiService {
-    public static saveitemDetail = (itemNum:number,shopId:number,shopItemId:number): Promise<any> => {
+    public static saveitemDetail = (itemNum:number,shopId:number,shopItemId:number,token:string): Promise<any> => {
         const params = {
             itemNum : itemNum,
             shopId:shopId,
             shopItemId:shopItemId
-        }
-        /*Constants.getAdvisor()*/ /*https://dev.xiao9gui.com/web/do/rest2/web/api*/
-        return HttpClient.post(Constants.getXiao9Gui(), '/web/do/rest2/web/api/shopcart/saveOrUpdateItemAndQueryList',params).then(res=>{
+        }       
+        return HttpClient.post(Constants.getXiao9Gui(), '/web/do/rest2/web/api/shopcart/saveOrUpdateItemAndQueryList?token=' + token,params).then(res=>{
+            return res;
+        })
+    }
+
+    public static queryShopItem = (shopId:number,token:string): Promise<any> => {
+        const params = {           
+            shopId:shopId
+        }       
+        return HttpClient.post(Constants.getXiao9Gui(), '/web/do/rest2/web/api/shopitem/queryShopItemList?token=' + token,params).then(res=>{          
             return res;
         })
     }

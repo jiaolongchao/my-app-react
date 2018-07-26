@@ -37,6 +37,7 @@ export default class Shouye extends React.Component<any, any> {
             })
         
             this.props.store.HomePageModel.getListDetail().then(res => {
+                console.log(res)
                 this.mySwiper = new Swiper(this.refs.headlineSwiper,{
                     direction: 'vertical',
                     autoplay: true,

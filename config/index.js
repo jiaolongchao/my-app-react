@@ -165,7 +165,7 @@ module.exports = {
         }
       },
       "/xiaojiugui": {
-        target: `http://dev.xiao9gui.com`,
+        target: `https://dev.xiao9gui.com`,
         changeOrigin: true,
         pathRewrite: {
           '^/xiaojiugui': ''

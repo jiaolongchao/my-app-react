@@ -138,7 +138,7 @@ export default class DomainNameConst {
         production: 'https://dev.xiao9gui.com',
         test:'https://dev.xiao9gui.com',
         dev:'https://dev.xiao9gui.com',
-        development: '/xiaojiugui'        
+        development: '/xiaojiugui'
     }
 
     static getEnv(){
