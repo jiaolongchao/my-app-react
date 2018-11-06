@@ -8,7 +8,7 @@ import Xiao9gui from '@container/xiao9gui/Xiao9gui';
 export default [    
     {
         path: '/',
-        component: Home,       
+        component: Shouye,       
         childRoutes:[                      
             {
                 path:'/xiao9gui',
